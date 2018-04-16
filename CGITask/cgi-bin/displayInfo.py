@@ -15,6 +15,8 @@ def getVal(form, attr):  # Get value from html form
 
 
 def arrayToString(arr):  # Convert array to string
+    if type(arr) is str:
+        return arr
     string = ""
     for element in arr:
         string += element
