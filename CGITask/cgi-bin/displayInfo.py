@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-import cgi
+import cgi, codecs, sys
+
+sys.stdout = codecs.getwriter('utf8')(sys.stdout.buffer) # Support Chinese
 
 # Variables
 form = cgi.FieldStorage()
